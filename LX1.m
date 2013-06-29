@@ -1,7 +1,6 @@
-
  clear all;
  
-
+% Coefficients of the bezier function
 
 b11=xish(2,5);
 % b22=xish(2,5);
@@ -9,6 +8,7 @@ b1=xish(2,5);
 b2=xish(0,2);
 b3=xish(0,5);
 
+% read control points from file
 M1 = dlmread('cv.txt','"');
 num=18;
 
@@ -80,8 +80,9 @@ num=6;
 
 
 % 
-% 
+% the degree of implicit surface
 dgr=9;
+% all permutation of the xyz
 ind=ruuu4(dgr);
 [hh,aa]=size(ind);
 hh = hh;
@@ -143,8 +144,11 @@ end
 toc
 sn=0;
 
+% load the constrains definition array
 load('NUMA1.mat');
 
+% add the selected equation 
+% the constrains for the surface cv.txt
 for i=1:h1,
     for j=1:v1,
         if numa1(i,j)==1
@@ -158,7 +162,7 @@ for i=1:h1,
 end
 
 
-
+% and the begin / end part of the curve % cv1.txt
 for i=1:1,
     for j=v2-2:v2-1,
             sn=sn+1;
@@ -178,7 +182,7 @@ for i=1:1,
     end
 end
 
-
+% and the whole curve for cv2.txt
 for i=1:1,
     for j=1:v3,
         sn=sn+1;
@@ -191,7 +195,7 @@ end
 
 
 
-    % 
+    % solve
    fcz=[fcg1;];     
    bf=[bg1';];
    
