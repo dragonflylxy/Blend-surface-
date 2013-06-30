@@ -145,6 +145,7 @@ toc
 sn=0;
 
 % load the constrains definition array
+% the size of numa1 is h1 X v1
 load('NUMA1.mat');
 
 % add the selected equation 
