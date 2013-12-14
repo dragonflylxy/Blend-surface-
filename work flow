@@ -20,5 +20,17 @@ x=     | (1-v)   v
  x^2  ---> convolution(x,x)
  x    ---> conv(x,1)
  
+ left:
+ 
+ 
+ a0*[xx xx xx  +  a1*[...] + a2*[...]  + ...  =[1 2 1
+     xx xx xx                                   2 4 2
+     xx xx xx]                                  1 2 1]
+     
+ these become a linear equationns about a0..a1..a2...
+ and is a constant function for u,v
+ consider this function as a bezier surface
+ the first fow is G0 continuity, the second row is G1 ..
+ 
  
  
